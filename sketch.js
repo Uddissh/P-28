@@ -31,7 +31,7 @@ function setup() {
 	ground = new Ground(850, 680, 1700, 20);
 	//tree = new Tree(1350, 450, 500, 500);
 	//boy = new Boy(200, 610, 180, 250);
-	stone = new Stone(204, 580, 40, 40);
+	stone = new Stone(204, 580, 40);
 	blah = new Rope(stone.body, {x : 150, y : 550});
 	mango1 = new Mango(1200, 360, 40);
 	mango2 = new Mango(1300, 380, 40);
@@ -47,7 +47,7 @@ function setup() {
 
 
 function draw() {
-  rectMode(CENTER);
+	
   background("yellow");
 
 
@@ -103,4 +103,12 @@ function detectollision(lstone,lmango) {
 		Matter.Body.setStatic(lmango.body, false);
 	}
 
+}
+
+function keyPressed(){
+	if(keyCode === 32)
+	{
+		Matter.Body.setPosition(stone.body,{x:235, y:420})
+		blah.attach(stone.body);
+	}
 }
