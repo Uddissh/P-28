@@ -29,6 +29,6 @@ class Rope {
       }
       attach(body)
     {
-     this.sling.bodyA = bodyA;
+     this.Rope.bodyA = body;
     }
 };
