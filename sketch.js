@@ -31,15 +31,15 @@ function setup() {
 	ground = new Ground(850, 680, 1700, 20);
 	//tree = new Tree(1350, 450, 500, 500);
 	//boy = new Boy(200, 610, 180, 250);
-	stone = new Stone(204, 580, 40);
+	stone = new Stone(204, 580, 10);
 	blah = new Rope(stone.body, {x : 150, y : 550});
-	mango1 = new Mango(1200, 360, 40);
-	mango2 = new Mango(1300, 380, 40);
-	mango3 = new Mango(1250, 370, 40);
-	mango4 = new Mango(1400, 370, 40);
-	mango5 = new Mango(1500, 380, 40);
-	mango6 = new Mango(1350, 330, 40);
-	mango7 = new Mango(1400, 320, 40);
+	mango1 = new Mango(1250, 280, 10);
+	mango2 = new Mango(1300, 380, 10);
+	mango3 = new Mango(1250, 370, 10);
+	mango4 = new Mango(1400, 370, 10);
+	mango5 = new Mango(1500, 380, 10);
+	mango6 = new Mango(1360, 305, 10);
+	mango7 = new Mango(1400, 280, 10);
 
 	Engine.run(engine);
   
@@ -99,7 +99,7 @@ function detectollision(lstone,lmango) {
 
 	var distance = dist(stoneBodyPosition.x, stoneBodyPosition.y, mangoBodyPosition.x, mangoBodyPosition.y)
 	//console.log(distance)
-	if (distance <= lmango.r + lstone.r) {
+	if (distance <= lmango.radius + lstone.radius) {
 		Matter.Body.setStatic(lmango.body, false);
 	}
 

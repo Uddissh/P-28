@@ -3,7 +3,6 @@ class Stone {
 
         var options = {
             'isStatic':false,
-            'restitution':0.8,
             'friction':1.0,
             'density':1.0
         }
@@ -22,7 +21,7 @@ class Stone {
         translate(this.body.position.x, this.body.position.y);
         rotate(angle)
         imageMode(CENTER);
-        image(this.image, 0, 0, this.radius, this.radius);
+        image(this.image, 0, 0, this.radius + 25, this.radius + 25);
         pop()
     }
 
